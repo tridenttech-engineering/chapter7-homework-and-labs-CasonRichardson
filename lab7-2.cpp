@@ -10,5 +10,22 @@ using namespace std;
 
 int main()
 {
+    const double GRWT_RT = 0.055;
+    double sales = 0;
+    double annualIncrease = 0.0;
+    int years = 0;
+
+    cout << "Current year's sales: ";
+    cin >> sales;
+    while (sales < 150000.0)
+        {
+            annualIncrease = sales * GRWT_RT;
+            sales += annualIncrease;
+            years += 1;
+        }
+
+    cout << fixed << setprecision(0);
+    cout << "Sales " << years << " years from now: $" << sales << endl;
+            
     return 0;
 } //end of main function
